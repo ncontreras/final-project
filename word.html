@@ -28,11 +28,16 @@
 
           <main role="main" class="inner cover">
             <h1 id="h1" class="cover-heading">Guess the Word</h1>
-            <form class="form-inline">
-              <label class="sr-only" for="inlineFormInput">Letter</label>
-              <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Enter a letter">
-              <button type="submit" class="btn btn-primary">Submit</button>
+
+            <p id="ratefield"></p>
+
+            <form name="rateformular">
+              <input name="guessedletter" type="text" size="4" maxlength="1">
+              <input name="button" type="button" value="Guess" onClick="letterCheck()">
             </form>
+
+            <p id="wrongLetters">Wrong Letters: </p>
+            <img src="hangman.png" alt="INSERT HANGHAM DRAWING HERE" id="hangman">
           </main>
 
           <footer class="mastfoot">
