@@ -81,3 +81,5 @@ function init(){
 }
 
 window.onload = init;
+
+// adapted from https://codepen.io/offline_blogger/pen/Kedtr
