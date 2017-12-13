@@ -1,7 +1,14 @@
-var word = ["xenophobic" , "preaccept", "duffer", "servants", "unbecomingly", "commended", "sonic", "jonathan", "advise", "parade", 
+/*
+var word = ["xenophobic" , "preaccept", "duffer", "servants", "unbecomingly", "commended", "sonic", "jonathan", "advise", "parade",
 "remarriages", "combos", "superconductor", "trackless", "uprousing", "emancipation", "lasciviousness", "stillest", 
 "conflictive", "scavenges"]
+*/
 
+var word = [
+    ["X","E","N","O","P","H","O","B","I","C"],
+    ["D","O","N","E"],
+    ["D","U","F","F","E","R"]
+]
 var random = word[Math.floor(Math.random() * (word.length-1))]; //randomizes
 
 var guess_word = word[random]; // chooses random words
@@ -64,10 +71,10 @@ var letterCheck = function() {
         }
 
         if (wrongCounter === 6) {
-            window.alert("You guessed six times and died.")
+            window.alert("You guessed six times and died.");
         }
     }
-}
+};
 
 function init(){
     printPlaceholder();
