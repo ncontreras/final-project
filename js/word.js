@@ -1,80 +1,88 @@
 /*
-var word = ["xenophobic" , "preaccept", "duffer", "servants", "unbecomingly", "commended", "sonic", "jonathan", "advise", "parade",
+let word = ["xenophobic" , "preaccept", "duffer", "servants", "unbecomingly", "commended", "sonic", "jonathan", "advise", "parade",
 "remarriages", "combos", "superconductor", "trackless", "uprousing", "emancipation", "lasciviousness", "stillest", 
 "conflictive", "scavenges"]
 */
 
-var word = [
-    ["X","E","N","O","P","H","O","B","I","C"],
+let word = [
+    ["X","E","N","O","P"," ", "H","O","B","I","C"],
     ["D","O","N","E"],
-    ["D","U","F","F","E","R"]
-]
-var random = word[Math.floor(Math.random() * (word.length-1))]; //randomizes
+    ["D","U","F","F","E","R"],
+    ["S","U","P","E","R","C","O","N","D","U","C","T","O","R"],
+    ["S","O","N","I","C"],
+    ["A","D","V","I","S","E"],
+    ["T","R","A","C","K"],
+    ["C","O","M","B","O"],
+    ["H","A","P","P","I","N","E","S","S"]
+];
 
-var guess_word = word[random]; // chooses random words
+let random = Math.floor((Math.random()*(word.length-1))); //randomizes
+
+let guess_word = word[random]; // chooses random words
+
+console.log(guess_word);
 
 // Add placeholders "_" to guess field and print to field
-var placeholders = new Array(guess_word.length());
-var wrongCounter = 0;
+let placeholder = new Array(guess_word.length);
+let wrongCounter = 0;
 
-for (var i = 0; i <placeholders.length; i++){
-    placeholders[i] = "_";
+for (let i = 0; i < placeholder.length; i++){
+    placeholder[i] = "_ ";
+    console.log(placeholder);
 }
 
 function printPlaceholder(){
-    for (var i = 0; i < placeholders.length; i++){
-        var ratefield = document.getElementById("ratefield");
-        var addholder = document.createTextNode(placeholder[i]);
-
+    for (let i = 0; i < placeholder.length; i++){
+        let ratefield = document.getElementById("ratefield");
+        let addholder = document.createTextNode(placeholder[i]);
         ratefield.appendChild(addholder);
     }
 }
 
-// Check if letter provider matches letter in the word
-var letterCheck = function() {
-    var f = document.rateformular;
-    var b = f.elements("guessedletter");
-    var checker = b.value;
-
+// Check if letter provided matches letter in the word
+let letterCheck = function(){
+    let f = document.rateformular;
+    let b = f.elements["guessedletter"];
+    let checker = b.value;
     checker = checker.toUpperCase();
 
-    for (var i = 0; i < guess_word.length; i++) {
-        if (guess_word[i] === checker) {
-            placeholders[i] = checker + " ";
+    for (let i = 0; i < guess_word.length; i++){
+        if(guess_word[i] === checker){
+            placeholder[i] = checker + " ";
             var letter = true;
         }
-        b.value = "";
+    b.value = "";
 
         // replaces field with new one
-        var ratefield = document.getElementById("ratefield");
-        ratefield.innerHTML = "";
-        printPlaceholder();
+    let ratefield = document.getElementById("ratefield");
+    ratefield.innerHTML = "";
+    printPlaceholder();
     }
 
-    if (!letter) {
-        var wrongLetter = document.getElementById("wrongLetter");
-        var addHolder = document.createTextNode(" " + checker);
-        wrongLetter.appendChild(addHolder);
+    if(!letter){
+        let wrongLetter = document.getElementById("wrongLetters");
+        let addholder = document.createTextNode(" " + checker);
+        wrongLetter.appendChild(addholder);
         wrongCounter++;
         // NEED TO FIGURE OUT HOW TO HANDLE HANGMAN DRAWING
     }
 
     // check if all letters found
-    var done = true;
-    for (var i = 0; i < placeholders.length; i++) {
-        if (placeholder[i] === "_") {
+    let done = true;
+    for (let i = 0; i < placeholder.length; i++){
+        if (placeholder[i] === "_ "){
             done = false;
         }
+     }
 
-        if (done) {
-            window.alert("You Win!");
-        }
-
-        if (wrongCounter === 6) {
-            window.alert("You guessed six times and died.");
-        }
+    if(done){
+        window.alert("You Win!");
     }
-};
+
+    if (wrongCounter === 6) {
+            window.alert("You guessed six times and died.");
+    }
+}
 
 function init(){
     printPlaceholder();
