@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    
-    <!-- <link rel="icon" href="../../../../favicon.ico"> -->
-
     <title>Hangman: WORDS!</title>
 
     <!-- Bootstrap core CSS -->
@@ -16,6 +13,8 @@
     <!-- Custom styles for this template -->
     <link href="css/word.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
   </head>
 
   <body>
@@ -37,6 +36,10 @@
             </form>
 
             <p id="wrongLetters">Wrong Letters: </p>
+            <div class="canvas-container" style="width: 500px; height: 500px; position: relative; -moz-user-select: none;">
+                <canvas id="c" class="lower-canvas" width="500" height="500" style="border: 1px solid rgb(204, 204, 204); position: absolute; width: 0px; top: 0px; touch-action: none; -moz-user-select: none;"></canvas>
+                <!-- <canvas class="upper-canvas " style="border: 1px solid rgb(204, 204, 204); position: absolute; width-touch-action: none; -moz-user-select: none; cursor: default;" width="500" height="500"></canvas> -->
+            </div>
             <img src="hangman.png" alt="INSERT HANGHAM DRAWING HERE" id="hangman">
           </main>
 
@@ -55,7 +58,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    
     <script src="js/circletype.min.js"></script>
     <script src="js/word.js"></script>
   </body>

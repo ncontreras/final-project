@@ -65,6 +65,10 @@ let letterCheck = function(){
         wrongLetter.appendChild(addholder);
         wrongCounter++;
         // NEED TO FIGURE OUT HOW TO HANDLE HANGMAN DRAWING
+        
+        jQuery.getScript('stickman.js', function() {
+            head();
+        });
     }
 
     // check if all letters found
