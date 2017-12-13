@@ -5,4 +5,3 @@ var word = ["xenophobic" , "preaccept", "duffer", "servants", "unbecomingly", "c
 let guess_word = word[Math.floor(Math.random() * word.length)];
 
 console.log(guess_word);
-
