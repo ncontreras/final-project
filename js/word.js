@@ -66,7 +66,7 @@ let letterCheck = function(){
         wrongCounter++;
         // NEED TO FIGURE OUT HOW TO HANDLE HANGMAN DRAWING
         
-        jQuery.getScript('stickman.js', function() {
+        jQuery.getScript('js/stickman.js', function() {
             head();
         });
     }
