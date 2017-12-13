@@ -1,5 +1,8 @@
 body {
   padding-top: 5rem;
+  background-color: #336E7B;
+  color:  #F5D76E;
+  font-family: 'Abel', sans-serif;
 }
 .starter-template {
   padding: 3rem 1.5rem;
