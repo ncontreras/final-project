@@ -5,7 +5,7 @@ let word = ["xenophobic" , "preaccept", "duffer", "servants", "unbecomingly", "c
 */
 
 let word = [
-    ["X","E","N","O","P"," ", "H","O","B","I","C"],
+    ["X","E","N","O","P","H","O","B","I","C"],
     ["D","O","N","E"],
     ["D","U","F","F","E","R"],
     ["S","U","P","E","R","C","O","N","D","U","C","T","O","R"],
@@ -110,11 +110,11 @@ let letterCheck = function(){
      }
 
     if(done){
-        window.alert("You Win!");
+        window.alert("No way! You guessed the word!");
     }
 
     if (wrongCounter === 6) {
-            window.alert("You guessed six times and died.");
+            window.alert("No!!! better luck next time. :(");
     }
 }
 
