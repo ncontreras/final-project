@@ -64,11 +64,23 @@ let letterCheck = function(){
         let addholder = document.createTextNode(" " + checker);
         wrongLetter.appendChild(addholder);
         wrongCounter++;
+        
+        if(wrongCounter === 1){
+            let hangman_image = document.getElementByID("hangman");
+            hangman.src = "images/head.JPG";
+        }
+
+
+
+
+
+
         // NEED TO FIGURE OUT HOW TO HANDLE HANGMAN DRAWING
         
-        jQuery.getScript('js/stickman.js', function() {
-            head();
-        });
+        // UNABLE TO IMPORT STICKMAN JAVASCRIPT FILE
+        // jQuery.getScript('js/stickman.js', function() {
+        //     head(); 
+        // });
     }
 
     // check if all letters found
