@@ -3,7 +3,7 @@ let word = ["xenophobic" , "preaccept", "duffer", "servants", "unbecomingly", "c
 "remarriages", "combos", "superconductor", "trackless", "uprousing", "emancipation", "lasciviousness", "stillest", 
 "conflictive", "scavenges"]
 */
-
+//
 let word = [
     ["C","I","N","D","E","R","E","L","L","A"],
     ["T","W","I","L","I","G","H","T"],
