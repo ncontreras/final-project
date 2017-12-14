@@ -110,12 +110,10 @@ let letterCheck = function(){
      }
 
     if(done){
-        window.alert("No way! You guessed the word!");
         window.location.href = "win.html";
     }
 
     if (wrongCounter === 6) {
-        window.alert("No!!! better luck next time. :(");
         window.location.href = "lose.html";
     }
 }
