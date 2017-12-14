@@ -66,7 +66,7 @@ let letterCheck = function(){
         wrongCounter++;
         
         if(wrongCounter === 1){
-            let hangman_image = document.getElementByID("hangman");
+            let hangman_image = document.getElementById("hangman");
             hangman.src = "images/head.JPG";
         }
 
