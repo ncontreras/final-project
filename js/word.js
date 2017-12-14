@@ -68,35 +68,33 @@ let letterCheck = function(){
         if(wrongCounter === 1){
             let hangman_image = document.getElementById("hangman");
             hangman.src = "images/head.JPG";
+        }
 
         if(wrongCounter === 2){
             let hangman_image = document.getElementById("hangman");
             hangman.src = "images/torso.JPG";
+        }
 
         if(wrongCounter === 3){
             let hangman_image = document.getElementById("hangman");
             hangman.src = "images/limb1.JPG";
+        }
 
         if(wrongCounter === 4){
             let hangman_image = document.getElementById("hangman");
             hangman.src = "images/limb2.JPG";
+        }
 
         if(wrongCounter === 5){
             let hangman_image = document.getElementById("hangman");
             hangman.src = "images/limb3.JPG";
+        }
 
         if(wrongCounter === 6){
             let hangman_image = document.getElementById("hangman");
             hangman.src = "images/limb4.JPG";
         }
 
-
-
-
-
-
-        // NEED TO FIGURE OUT HOW TO HANDLE HANGMAN DRAWING
-        
         // UNABLE TO IMPORT STICKMAN JAVASCRIPT FILE
         // jQuery.getScript('js/stickman.js', function() {
         //     head(); 
