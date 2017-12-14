@@ -64,7 +64,8 @@ let letterCheck = function(){
         let addholder = document.createTextNode(" " + checker);
         wrongLetter.appendChild(addholder);
         wrongCounter++;
-        
+
+        // Draws hangman drawing
         if(wrongCounter === 1){
             let hangman_image = document.getElementById("hangman");
             hangman.src = "images/head.JPG";
@@ -111,10 +112,12 @@ let letterCheck = function(){
 
     if(done){
         window.alert("No way! You guessed the word!");
+        window.location.href = "win.html";
     }
 
     if (wrongCounter === 6) {
-            window.alert("No!!! better luck next time. :(");
+        window.alert("No!!! better luck next time. :(");
+        window.location.href = "lose.html";
     }
 }
 
